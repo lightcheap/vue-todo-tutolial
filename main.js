@@ -51,7 +51,7 @@ const app = new Vue({
              * というオブジェクトを現在の todos リストへ push
              * 作業状態「state」はデフォルト「作業中＝０」で作成
              */
-            this.todos.puch({
+            this.todos.push({
                 id: todoStorage.uid++,
                 comment: comment.value,
                 state: 0
