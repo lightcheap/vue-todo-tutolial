@@ -91,7 +91,7 @@ const app = new Vue({
     computed: {
         labels() {
             return this.options.reduce(function(a, b) {
-                return Object,assign(a, { [b.value]: b.label })
+                return Object.assign(a, { [b.value]: b.label })
             }, {})
             // キーから見つけやすいように、次のように加工したデータを作成
             // {0: '作業中', 1: '完了', -1: 'すべて'}
