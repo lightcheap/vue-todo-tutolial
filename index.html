@@ -15,7 +15,7 @@
         <label v-for="label in options">
             <input type="radio"
                 v-model="current"
-                v-bind:value="label.value" name="" id="">{{ label.label}}
+                v-bind:value="label.value">{{ label.label}}
         </label>
 
         <!-- リストの絞り込みの件数を表示 -->
@@ -55,13 +55,13 @@
                 </tr>
             </tbody>
         </table>
-        <p>※削除ボタンはコントロールキーを押しながらクリック</p>
+        <p>※削除ボタンはコントロールキーを押しながらクリックしないと効かないよ</p>
 
         <!-- 新規登録フォーム -->
         <h2>新しい作業の追加</h2>
         <form class="add-form" v-on:submit.prevent="doAdd">
             <!-- コメント入力フォーム -->
-            コメント<input type="text" ref="comment" name="" id="">
+            コメント<input type="text" ref="comment">
             <!-- 追加ボタンのモック -->
             <button type="submit">追加</button>
         </form>
