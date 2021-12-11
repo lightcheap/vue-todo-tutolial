@@ -27,8 +27,8 @@ const app = new Vue({
         todos: [],
         options: [
             { value: -1, label: 'すべて'},
-            { value: 0, label: '作業中'},
-            { value: 1, label: '完了'}
+            { value: 0,  label: '作業中'},
+            { value: 1,  label: '完了'}
         ],
         // 選択しているoptions の value を記憶するためのデータ
         // 初期値を「-1」つまり「すべて」
