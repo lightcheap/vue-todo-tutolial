@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="" id="app">
-        <h1>TODO　リスト　チュートリアル</h1>
+        <h1>TODOリスト　チュートリアル</h1>
 
         <!-- 絞り込みラジオボタン -->
         <label v-for="label in options">
@@ -26,7 +26,7 @@
             <thead>
                 <tr>
                     <th class="id">ID</th>
-                    <th class="comment">コメント</th>
+                    <th class="comment">件名</th>
                     <th class="state">状態</th>
                     <th class="button">-</th>
                 </tr>
@@ -60,9 +60,9 @@
         <!-- 新規登録フォーム -->
         <h2>新しい作業の追加</h2>
         <form class="add-form" v-on:submit.prevent="doAdd">
-            <!-- コメント入力フォーム -->
-            コメント<input type="text" ref="comment">
-            <!-- 追加ボタンのモック -->
+            <!-- 作業入力フォーム -->
+            件名<input type="text" ref="comment">
+            <!-- 追加ボタン -->
             <button type="submit">追加</button>
         </form>
         <!-- テーブルの枠組み -->
