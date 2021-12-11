@@ -8,25 +8,34 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div class="" id="app">
-        <h1>TODO　リスト　チュートリアル</h1>
+    <div class="app-container" id="app">
+        <h1>TODOリスト　チュートリアル</h1>
+
+        <!-- 新規登録フォーム -->
+        <h2>新しい作業の追加</h2>
+        <form class="add-form" v-on:submit.prevent="doAdd">
+            <!-- 作業入力フォーム -->
+            件名<input type="text" ref="comment">
+            <!-- 追加ボタン -->
+            <button type="submit">追加</button>
+        </form>
 
         <!-- 絞り込みラジオボタン -->
         <label v-for="label in options">
             <input type="radio"
-                v-model="current"
-                v-bind:value="label.value">{{ label.label}}
+                    v-model="current"
+                    v-bind:value="label.value">{{ label.label}}
         </label>
 
         <!-- リストの絞り込みの件数を表示 -->
-        ({{ computedTodos.length }} 件を表示)
+        <p>({{ computedTodos.length }} 件を表示)</p>
 
         <!-- リストテーブル -->
         <table>
             <thead>
                 <tr>
                     <th class="id">ID</th>
-                    <th class="comment">コメント</th>
+                    <th class="comment">件名</th>
                     <th class="state">状態</th>
                     <th class="button">-</th>
                 </tr>
@@ -57,15 +66,6 @@
         </table>
         <p>※削除ボタンはコントロールキーを押しながらクリックしないと効かないよ</p>
 
-        <!-- 新規登録フォーム -->
-        <h2>新しい作業の追加</h2>
-        <form class="add-form" v-on:submit.prevent="doAdd">
-            <!-- コメント入力フォーム -->
-            コメント<input type="text" ref="comment">
-            <!-- 追加ボタンのモック -->
-            <button type="submit">追加</button>
-        </form>
-        <!-- テーブルの枠組み -->
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="main.js"></script>
